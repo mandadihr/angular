@@ -1,0 +1,15 @@
+#temp {
+    padding: 10%;
+    position: relative;
+    top: 10%;
+}
+
+.hover{
+    cursor: pointer;
+}
+
+#msg{
+    position:absolute;
+    top: 88px;
+    font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+}

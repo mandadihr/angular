@@ -1,0 +1,19 @@
+<app-header></app-header>
+<!-- <p style="position: relative; top: 87px;">Book list</p>
+<div *ngFor="let book of list" style="position: relative; top: 87px;">
+  {{book.Title}}
+</div> -->
+<div *ngIf="data" >
+<div *ngFor="let book of list" class="card" style="width: 18rem;">
+  <img class="card-img-top" src="{{book.ThumbNail}}" alt="Card image cap">
+  <div class="card-body">
+    <p class="card-text">{{book.Title}}</p>
+    <p class="card-text">{{book.SubTitle}}</p>
+  </div>
+</div>
+</div>
+<div *ngIf="!data">
+  <p id="msg"><strong>Books Added to Library!!</strong></p>
+</div>
+
+<app-footer></app-footer>

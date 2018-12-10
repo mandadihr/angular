@@ -1,0 +1,58 @@
+<app-header></app-header>
+<div *ngIf="data" class="container">
+  <div id="temp">
+    <button *ngIf ="addBook" type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-primary" style="position: relative; left: 4px;
+      bottom: 43px;"
+      (click)="add()">Add
+      to my Library</button>
+    <div class="row">
+      <div class="col-lg">
+        <h1 class="display-4">{{this.details.Title}}</h1>
+        <p class="lead">{{this.details.SubTitle}}</p>
+        <p class="lead">{{this.details.Author}}</p>
+        <p>{{this.details.Description}}</p>
+        <div *ngIf="this.owners"><p>Available Library: </p>
+        <p *ngFor="let owner of owners">{{this.owner}}</p>
+        </div>
+      </div>
+      <img src="{{this.details.ThumbNail}}" alt="No Image Found">
+    </div>
+  </div>
+</div>
+<div *ngIf="!data">
+<p id="msg"><strong>No Books Found!!</strong></p>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Book Info</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <input type="email" [(ngModel)]="ISBN" name="isbn" class="form-control" id="isbn" placeholder="ISBN">
+          </div>
+          <div class="form-group">
+            <input class="form-control" name="title" [(ngModel)]="title" id="title" placeholder="title">
+          </div>
+          <div class="form-group">
+            <input class="form-control" name="description" [(ngModel)]="description" id="description" placeholder="description">
+          </div>
+          <div class="form-group">
+            <input class="form-control" name="author" [(ngModel)]="author" id="author" placeholder="author">
+          </div>
+          <button type="submit" class="btn btn-primary" (click) = submit()>Submit</button>
+        </form>
+      </div>
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Save</button>
+      </div> -->
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>
