@@ -1,0 +1,27 @@
+.user {
+    font-family: cursive;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 43px;
+}
+
+.news {
+    font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+}
+
+.card {
+    float: left !important;
+    margin-top: 2%;
+    margin-left: 10px;
+    height: 350px;
+}
+
+.card-text{
+    height: 80px;
+}
+
+.card-img-top{
+    width: 18rem;
+    height: 150px;
+}
